@@ -73,6 +73,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
             property_set("ro.mot.build.customerid", "retusa_glb");
             property_set("ro.telephony.default_network", "0");
             property_set("persist.radio.multisim.config", "");
+            property_set("ro.telephony.ril_class", "FalconMSM8226Ril");
         } else {
             /* xt1032 */
             property_set("ro.product.device", "falcon_umts");
@@ -82,6 +83,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
             property_set("ro.mot.build.customerid", "RTGB");
             property_set("ro.telephony.default_network", "0");
             property_set("persist.radio.multisim.config", "");
+            property_set("ro.telephony.ril_class", "FalconMSM8226Ril");
         }
     } else if (ISMATCH(radio, "0x3")) {
         /* cdma */
@@ -99,6 +101,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
             property_set("ro.com.google.clientidbase.ms", "android-verizon");
             property_set("ro.com.google.clientidbase.am", "android-verizon");
             property_set("ro.com.google.clientidbase.yt", "android-verizon");
+            property_set("ro.telephony.ril_class", "FalconMSM8226Ril");
         } else {
             /* xt1031 */
             property_set("ro.product.device", "falcon_cdma");
@@ -109,6 +112,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
             property_set("ro.mot.build.customerid", "sprint");
             property_set("ro.cdma.home.operator.alpha", "Boost Mobile");
             property_set("ro.cdma.home.operator.numeric", "311870");
+            property_set("ro.telephony.ril_class", "FalconMSM8226Ril");
         }
         property_set("ro.telephony.default_network", "4");
         property_set("ro.telephony.gsm-routes-us-smsc", "1");
@@ -120,6 +124,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.cdma.otaspnumschema", "SELC,1,80,99");
         property_set("ro.cdma.data_retry_config", "max_retries=infinite,0,0,10000,10000,100000,10000,10000,10000,10000,140000,540000,960000");
         property_set("ro.gsm.data_retry_config", "default_randomization=2000,max_retries=infinite,1000,1000,80000,125000,485000,905000");
+        property_set("ro.telephony.ril_class", "FalconMSM8226Ril");
     } else if (ISMATCH(radio, "0x5")) {
         /* xt1033 */
         property_set("ro.product.device", "falcon_umtsds");
@@ -131,6 +136,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("persist.radio.multisim.config", "dsds");
         property_set("persist.radio.dont_use_dsd", "true");
         property_set("persist.radio.plmn_name_cmp", "1");
+        property_set("ro.telephony.ril_class", "FalconMSM8226Rilds");
     } else if (ISMATCH(radio, "0x6")) {
         /* xt1034 */
         property_set("ro.product.device", "falcon_umts");
@@ -140,6 +146,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.mot.build.customerid", "retusa_aws");
         property_set("ro.telephony.default_network", "0");
         property_set("persist.radio.multisim.config", "");
+        property_set("ro.telephony.ril_class", "FalconMSM8226Ril");
     }
     property_get("ro.product.device", device);
     strlcpy(devicename, device, sizeof(devicename));
