@@ -92,12 +92,14 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
             /* xt1028 */
             property_set("ro.product.device", "falcon_cdma");
 	    property_set("ro.build.product", "falcon_cdma");
-            property_set("ro.build.description", "falcon_verizon-user 4.3 14.10.0Q3.X-84-14 16 release-keys");
-            property_set("ro.build.fingerprint", "motorola/falcon_verizon/falcon_cdma:4.3/14.10.0Q3.X-84-14/16:user/release-keys");
+	    property_set("ro.build.description", "falcon_verizon-user 4.4.4 KXB21.14-L1.41 42 release-keys");
+            property_set("ro.build.fingerprint", "motorola/falcon_verizon/falcon_cdma:4.4.4/KXB21.14-L1.41/42:user/release-keys");
             property_set("persist.radio.multisim.config", "");
             property_set("ro.mot.build.customerid", "verizon");
             property_set("ro.cdma.home.operator.alpha", "Verizon");
+	    property_set("ro.gsm.home.operator.alpha", "Verizon");
             property_set("ro.cdma.home.operator.numeric", "310004");
+            property_set("ro.gsm.home.operator.numeric", "310004");
             property_set("ro.com.google.clientidbase.ms", "android-verizon");
             property_set("ro.com.google.clientidbase.am", "android-verizon");
             property_set("ro.com.google.clientidbase.yt", "android-verizon");
@@ -110,15 +112,21 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
             property_set("persist.radio.multisim.config", "");
             property_set("ro.mot.build.customerid", "sprint");
             property_set("ro.cdma.home.operator.alpha", "Boost Mobile");
-            property_set("ro.cdma.home.operator.numeric", "311870");
+           property_set("ro.gsm.home.operator.alpha", "Boost Mobile");
+           property_set("ro.cdma.home.operator.numeric", "311870");
+	   property_set("ro.gsm.home.operator.numeric", "311870");
         }
-        property_set("ro.telephony.default_network", "4");
+        property_set("ro.telephony.default_network", "10");
         property_set("ro.telephony.gsm-routes-us-smsc", "1");
         property_set("persist.radio.vrte_logic", "2");
         property_set("persist.radio.0x9e_not_callname", "1");
         property_set("persist.radio.skip_data_check", "1");
         property_set("persist.ril.max.crit.qmi.fails", "4");
         property_set("ro.cdma.home.operator.isnan", "1");
+        property_set("ro.cdma.subscribe_on_ruim_ready","true");
+        property_set("ro.telephony.default_cdma_sub","0");
+	property_set("ro.telephony.get_imsi_from_sim","true");
+        property_set("ro.use_data_netmgrd","true");
         property_set("ro.cdma.otaspnumschema", "SELC,1,80,99");
         property_set("ro.cdma.data_retry_config", "max_retries=infinite,0,0,10000,10000,100000,10000,10000,10000,10000,140000,540000,960000");
         property_set("ro.gsm.data_retry_config", "default_randomization=2000,max_retries=infinite,1000,1000,80000,125000,485000,905000");
