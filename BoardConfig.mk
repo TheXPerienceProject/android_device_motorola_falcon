@@ -25,6 +25,8 @@ TARGET_OTA_ASSERT_DEVICE := xt1031,xt1032,xt1033,xt1034,falcon_umts,falcon_umtsd
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 TARGET_KERNEL_CONFIG := falcon_defconfig
 
+TARGET_KERNEL_SOURCE := kernel/motorola/msm8226
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_falcon.c
@@ -38,6 +40,11 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1023410176
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/extra.fstab:recovery/root/etc/extra.fstab
 
 #TWRP
 #TWRP
