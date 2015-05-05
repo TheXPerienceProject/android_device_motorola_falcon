@@ -46,38 +46,5 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/extra.fstab:recovery/root/etc/extra.fstab
-
-#TWRP
-#TWRP
-DEVICE_RESOLUTION := 720x1280
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TW_IGNORE_MAJOR_AXIS_0 := true
-#Delete TW_INCLUDE_L_CRYPTO := true ?
-TW_INCLUDE_L_CRYPTO := true
-TW_NO_USB_STORAGE := false
-TW_NO_SCREEN_TIMEOUT := true
-TW_NO_SCREEN_BLANK := true
-TW_INTERNAL_STORAGE_PATH := "/data/media"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-BOARD_HAS_NO_REAL_SDCARD := true
-RECOVERY_SDCARD_ON_DATA := true
-HAVE_SELINUX := true
-
-PRODUCT_COPY_FILES += \
- device/motorola/falcon/twrp.fstab:recovery/root/etc/twrp.fstab
-
-#MultiROM config. MultiROM also uses parts of TWRP config
-MR_INPUT_TYPE := type_b
-MR_INIT_DEVICES := device/motorola/falcon/mr_init_devices.c
-MR_DPI := hdpi
-MR_DPI_FONT := 160
-MR_FSTAB := device/motorola/falcon/twrp.fstab
-MR_KEXEC_MEM_MIN := 0x05000000
-MR_KEXEC_DTB := true
-MR_INFOS := device/motorola/falcon/mrom_infos
-MR_CONTINUOUS_FB_UPDATE := true
-
 # inherit from the proprietary version
 -include vendor/motorola/falcon/BoardConfigVendor.mk
