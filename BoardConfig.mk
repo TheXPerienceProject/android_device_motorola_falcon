@@ -22,7 +22,7 @@ LOCAL_PATH := device/motorola/falcon
 TARGET_OTA_ASSERT_DEVICE := xt1031,xt1032,xt1033,xt1034,falcon_umts,falcon_umtsds,falcon_cdma,falcon_retuaws,falcon,falcon_gpe
 
 # Board
-TARGET_BOARD_INFO_FILE := device/motorola/falcon/board-info.txt
+#TARGET_BOARD_INFO_FILE := device/motorola/falcon/board-info.txt
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
