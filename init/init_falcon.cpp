@@ -37,7 +37,9 @@
 #include "vendor_init.h"
 #include "property_service.h"
 #include "log.h"
+#include "util.h"
 using android::base::GetProperty;
+using android::init::property_set;
 
 void property_override(char const prop[], char const value[])
 {
@@ -113,7 +115,7 @@ void vendor_load_properties()
             property_set("ro.com.google.clientidbase.gmm", "android-motorola");
             property_set("ro.com.google.clientidbase.yt", "android-motorola");
         } else {
-            LOG(ERROR) << "Unknown mobile carrier";
+            //LOG(ERROR) << "Unknown mobile carrier";
         }
         property_override("ro.product.device", "falcon_cdma");
         property_override("ro.build.product", "falcon_cdma");
@@ -158,6 +160,6 @@ void vendor_load_properties()
         property_set("persist.radio.multisim.config", "");
     }
 
-    std::string device = GetProperty("ro.product.device", "");
-    LOG(INFO) << "Found radio id: '" << radio.c_str() << "', setting build properties for '" << device.c_str() << "' device\n";
+    //std::string device = GetProperty("ro.product.device", "");
+    //LOG(INFO) << "Found radio id: '" << radio.c_str() << "', setting build properties for '" << device.c_str() << "' device\n";
 }
