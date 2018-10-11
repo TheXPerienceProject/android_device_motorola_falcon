@@ -1,4 +1,6 @@
 # proprietary files for falcon
+#Sensors
+bin/akmd8963
 
 # Audio
 etc/Bluetooth_cal.acdb
