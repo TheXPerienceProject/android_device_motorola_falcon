@@ -33,6 +33,7 @@
 #include <fstream>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
+#include <android-base/logging.h>
 #include <android-base/properties.h>
 #include "vendor_init.h"
 #include "property_service.h"
@@ -170,7 +171,7 @@ void vendor_load_properties()
 
     std::string device = GetProperty("ro.product.device", "");
     LOG(INFO) << "Found radio id: '" << radio.c_str() << "', setting build properties for '" << device.c_str() << "' device\n";
-	
+
 	// Init a dummy BT MAC address, will be overwritten later
     property_set("ro.boot.btmacaddr", "00:00:00:00:00:00");
 }
