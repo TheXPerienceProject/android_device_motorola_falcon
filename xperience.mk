@@ -9,5 +9,8 @@ DISABLE_EAP_PROXY := true
 
 PRODUCT_RELEASE_NAME := MOTO G
 PRODUCT_NAME := xperience_falcon
+PRODUCT_MANUFACTURER := motorola
+PRODUCT_BRAND := motorola
+BOARD_VENDOR := motorola
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
