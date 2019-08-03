@@ -66,8 +66,6 @@ void vendor_load_properties()
         return;
 
     property_override("ro.product.model", "Moto G");
-    // Init a dummy BT MAC address, will be overwritten later
-    property_set("ro.boot.btmacaddr", "00:00:00:00:00:00");
 
     std::string radio = GetProperty("ro.boot.radio", "");
     if (radio == "0x1") {
