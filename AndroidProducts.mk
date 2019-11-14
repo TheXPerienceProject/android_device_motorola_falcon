@@ -15,4 +15,4 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/full_falcon.mk \
-    $(LOCAL_DIR)/xperience.mk
+    $(LOCAL_DIR)/xperience_falcon.mk
